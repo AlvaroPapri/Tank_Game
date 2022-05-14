@@ -24,10 +24,7 @@ public class Tank : MonoBehaviour
     {
         Move();
         Attack();
-        if (Input.GetMouseButtonDown(1))
-        {
-            FindTarget();
-        }
+        FindTarget();
         AutoAimToTarget();
     }
 
@@ -47,21 +44,26 @@ public class Tank : MonoBehaviour
             Instantiate(prefab, posRotCanonBall.position, posRotCanonBall.rotation);
         }
     }
-
+    
+    /*
+     * FindTarget() & AutoAimToTarget()
+     * ---
+     * Using Raycast mainly, it makes a ray from camera to mouse and checks if there's an enemy tank,
+     * if it's so, it rotates our tank's head smoothly in order to make it easy to aim.
+     */ 
     private void FindTarget()
     {
-        _ray = Camera.main.ScreenPointToRay(Input.mousePosition);
-
-        if (Physics.Raycast(_ray, out _hit, Mathf.Infinity, layerTank))
+        if (Input.GetMouseButtonDown(1))
         {
-            _target = _hit.collider.gameObject;
+            _ray = Camera.main.ScreenPointToRay(Input.mousePosition);
+
+            if (Physics.Raycast(_ray, out _hit, Mathf.Infinity, layerTank))
+            {
+                _target = _hit.collider.gameObject;
+            } 
         }
     }
 
-    /*
-     * Using Raycast mainly, it makes a ray from camera to mouse and checks if there's an enemy tank,
-     * if it's so, it rotates our tank's head smoothly in order to make it easy to aim.
-     */
     private void AutoAimToTarget()
     {
         if (_target)
@@ -72,7 +74,7 @@ public class Tank : MonoBehaviour
                 Quaternion.Slerp(posRotTankHead.rotation, targetRotation, headTurnSpeed * Time.deltaTime);
         }
 
-        
+
         if (_target.IsDestroyed())
         {
             CorrectAimPosition();

@@ -1684,7 +1684,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   scoreText: {fileID: 17863114}
-  enemiesLeft: 3
+  enemiesLeft: 10
   WinManager: {fileID: 1894491347}
 --- !u!4 &1018374351
 Transform:
@@ -2393,7 +2393,7 @@ MonoBehaviour:
   - {fileID: 394705107}
   GameOverManager: {fileID: 1540938502}
   secondsBetweenSpawn: 3
-  stopSpawning: 1
+  stopSpawning: 0
 --- !u!4 &1448944445
 Transform:
   m_ObjectHideFlags: 0
