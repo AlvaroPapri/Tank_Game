@@ -15,8 +15,10 @@ public class Tank : MonoBehaviour
     public Transform posRotCanonBall;
     public Transform posRotTankHead;
     public LayerMask layerTank;
+    
     private Ray _ray;
     private RaycastHit _hit;
+    private GameObject _target;
 
     private void Update()
     {
@@ -24,8 +26,9 @@ public class Tank : MonoBehaviour
         Attack();
         if (Input.GetMouseButtonDown(1))
         {
-           AutoAim();
+            FindTarget();
         }
+        AutoAimToTarget();
     }
 
     private void Move()
@@ -45,21 +48,40 @@ public class Tank : MonoBehaviour
         }
     }
 
+    private void FindTarget()
+    {
+        _ray = Camera.main.ScreenPointToRay(Input.mousePosition);
+
+        if (Physics.Raycast(_ray, out _hit, Mathf.Infinity, layerTank))
+        {
+            _target = _hit.collider.gameObject;
+        }
+    }
+
     /*
      * Using Raycast mainly, it makes a ray from camera to mouse and checks if there's an enemy tank,
      * if it's so, it rotates our tank's head smoothly in order to make it easy to aim.
      */
-    private void AutoAim()
+    private void AutoAimToTarget()
     {
-        _ray = Camera.main.ScreenPointToRay(Input.mousePosition);
-        if (Physics.Raycast(_ray, out _hit, Mathf.Infinity, layerTank))
+        if (_target)
         {
-            GameObject enemyTank = _hit.collider.gameObject;
-
-            Quaternion targetRotation = Quaternion.LookRotation(enemyTank.transform.position - transform.position);
+            // Look to target
+            Quaternion targetRotation = Quaternion.LookRotation(_target.transform.position - transform.position);
             posRotTankHead.rotation =
                 Quaternion.Slerp(posRotTankHead.rotation, targetRotation, headTurnSpeed * Time.deltaTime);
-            Debug.Log("From: " + posRotTankHead.rotation + " To: " + targetRotation);
         }
+
+        
+        if (_target.IsDestroyed())
+        {
+            CorrectAimPosition();
+        }
+        
+    }
+
+    private void CorrectAimPosition()
+    {
+        posRotTankHead.rotation = Quaternion.Slerp(posRotTankHead.rotation, transform.rotation, headTurnSpeed * Time.deltaTime);
     }
 }

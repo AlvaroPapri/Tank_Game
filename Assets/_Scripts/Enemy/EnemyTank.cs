@@ -16,18 +16,18 @@ public class EnemyTank : MonoBehaviour
     [Header("Target")]
     private GameObject player;
 
-    void Start()
+    private void Start()
     {
         player = GameObject.FindGameObjectWithTag("Player");
         InvokeRepeating("Attack", 3, timeBetweenAttacks);
     }
 
-    void Update()
+    private void Update()
     {
         if(!player.IsDestroyed()) MoveToPlayer();
     }
 
-    void MoveToPlayer()
+    private void MoveToPlayer()
     {
         transform.LookAt(player.transform.position);
 
@@ -39,7 +39,7 @@ public class EnemyTank : MonoBehaviour
         }
     }
 
-    void Attack()
+    private void Attack()
     {
         Instantiate(ballPrefab, posRotBall.position, posRotBall.rotation);
     }
