@@ -4,6 +4,7 @@ using UnityEngine.UI;
 public class TankHealth : MonoBehaviour
 {
     [Header("Health Parameters")] 
+    public bool godMode;
     public float maxHealth;
     public float currentHealth;
     public float ballDamage;
@@ -25,7 +26,7 @@ public class TankHealth : MonoBehaviour
             lifeBar.fillAmount = currentHealth / maxHealth;
             Destroy(other.gameObject);
 
-            if (currentHealth <= 0)
+            if (currentHealth <= 0 && !godMode)
             {
                 GameOverManager.Setup(ScoreManager.Instance.enemiesLeft);
             }

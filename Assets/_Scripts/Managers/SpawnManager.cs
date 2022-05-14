@@ -7,6 +7,7 @@ public class SpawnManager : MonoBehaviour
     public Transform[] posSpawn;
     public GameOverManager GameOverManager;
     public int secondsBetweenSpawn;
+    public bool stopSpawning;
 
     private int _randomSpawn;
 
@@ -20,6 +21,7 @@ public class SpawnManager : MonoBehaviour
         _randomSpawn = Random.Range(0, posSpawn.Length - 1);
 
         Instantiate(enemyPrefab, posSpawn[_randomSpawn].position, posSpawn[_randomSpawn].rotation);
-        if (!GameOverManager.isGameOver) Invoke("SpawnEnemy", secondsBetweenSpawn);
+        
+        if (!GameOverManager.isGameOver && !stopSpawning) Invoke("SpawnEnemy", secondsBetweenSpawn);
     }
 }

@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 1115149831}
   - component: {fileID: 1115149830}
   - component: {fileID: 1115149829}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Canvas
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -112,7 +112,7 @@ GameObject:
   - component: {fileID: 1318371703}
   - component: {fileID: 1318371705}
   - component: {fileID: 1318371704}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: LifeFiller
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -188,7 +188,7 @@ GameObject:
   - component: {fileID: 1331920871}
   - component: {fileID: 1331920873}
   - component: {fileID: 1331920872}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: EnemyLife
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -265,7 +265,7 @@ GameObject:
   - component: {fileID: 7522342387211831386}
   - component: {fileID: 8939129865324228968}
   - component: {fileID: 9031552391596980600}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: SmallTank_WheelsSmallBottom
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -348,7 +348,7 @@ GameObject:
   - component: {fileID: 7288920383159529220}
   - component: {fileID: 7953864783091195310}
   - component: {fileID: 4861304517877441886}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: SmallTank_WheelsSmallUpper
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -433,7 +433,7 @@ GameObject:
   - component: {fileID: 6412590970709901878}
   - component: {fileID: 4000407745882767876}
   - component: {fileID: 6412590970709901882}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Enemy - Tank
   m_TagString: Enemy
   m_Icon: {fileID: 0}
@@ -535,7 +535,7 @@ GameObject:
   - component: {fileID: 4577409832966986448}
   - component: {fileID: 5682358085422021584}
   - component: {fileID: 3526530917437148386}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: SmallTank_WheelsBigFront
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -618,7 +618,7 @@ GameObject:
   - component: {fileID: 3167904604116213437}
   - component: {fileID: 8977560661847902507}
   - component: {fileID: 8459199102533124560}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: SmallTank_Base
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -701,7 +701,7 @@ GameObject:
   - component: {fileID: 377890812564602170}
   - component: {fileID: 4073184618293567143}
   - component: {fileID: 7469577806943946951}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: SmallTank_WheelsBigBack
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -784,7 +784,7 @@ GameObject:
   - component: {fileID: 5859328331414911373}
   - component: {fileID: 1077402623933501345}
   - component: {fileID: 8248343627822588006}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: SmallTank_Tower
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -866,7 +866,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7057571913369515547}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: PosRotCanonBall
   m_TagString: Untagged
   m_Icon: {fileID: 0}

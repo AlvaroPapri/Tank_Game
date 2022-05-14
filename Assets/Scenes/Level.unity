@@ -567,8 +567,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 7
   turnSpeed: 80
+  headTurnSpeed: 2
   prefab: {fileID: 592198241981131570, guid: fbcb685d010860f43aa613a2a9cd2edb, type: 3}
   posRotCanonBall: {fileID: 1008799479}
+  posRotTankHead: {fileID: 1411402287}
+  layerTank:
+    serializedVersion: 2
+    m_Bits: 64
 --- !u!4 &481307946 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 7432218926111038481, guid: 65620b9bb482dd3489cba0f1334f3f6d, type: 3}
@@ -615,6 +620,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 79e8bf0cd4d1e1641903a4e2368791be, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  godMode: 1
   maxHealth: 3
   currentHealth: 0
   ballDamage: 1
@@ -2387,6 +2393,7 @@ MonoBehaviour:
   - {fileID: 394705107}
   GameOverManager: {fileID: 1540938502}
   secondsBetweenSpawn: 3
+  stopSpawning: 1
 --- !u!4 &1448944445
 Transform:
   m_ObjectHideFlags: 0
@@ -3298,10 +3305,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Enemy - Tank
       objectReference: {fileID: 0}
-    - target: {fileID: 2568002647270360853, guid: ed37e7d93f195514b9e5b278bdee3aff, type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 2947799890503163311, guid: ed37e7d93f195514b9e5b278bdee3aff, type: 3}
       propertyPath: m_RootOrder
       value: 1
@@ -3345,10 +3348,6 @@ PrefabInstance:
     - target: {fileID: 2947799890503163311, guid: ed37e7d93f195514b9e5b278bdee3aff, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4000407745882767876, guid: ed37e7d93f195514b9e5b278bdee3aff, type: 3}
-      propertyPath: timeBetweenAttacks
-      value: 2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ed37e7d93f195514b9e5b278bdee3aff, type: 3}

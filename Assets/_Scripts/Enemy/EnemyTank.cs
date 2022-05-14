@@ -32,6 +32,7 @@ public class EnemyTank : MonoBehaviour
         transform.LookAt(player.transform.position);
 
         float distance = Vector3.Distance(transform.position, player.transform.position);
+        
         if (distance > distanceToPlayer)
         {
             transform.Translate(Vector3.forward * (speed * Time.deltaTime));
