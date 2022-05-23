@@ -14,4 +14,4 @@ Those are the basics controls that you have on this game. In a future there will
 
 Thanks for playing!
 
-You can find me on [Twitter](https://twitter.com/AlvaroPapri) or contating me directly to alvaro.papri.gamedev@gmail.com
+You can find me on [Twitter](https://twitter.com/AlvaroPapri) or contacting me directly to alvaro.papri.gamedev@gmail.com

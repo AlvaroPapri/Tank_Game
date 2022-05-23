@@ -5,9 +5,6 @@ using UnityEngine.UI;
 
 public class Tank : MonoBehaviour
 {
-    [Header("Movement")]
-    public int speed;
-    public int turnSpeed;
     public int headTurnSpeed;
     
     [Header("Attack")] 
@@ -22,19 +19,9 @@ public class Tank : MonoBehaviour
 
     private void Update()
     {
-        Move();
         Attack();
         FindTarget();
         AutoAimToTarget();
-    }
-
-    private void Move()
-    {
-        float h = Input.GetAxis("Horizontal");
-        float v = Input.GetAxis("Vertical");
-        
-        transform.Translate(Vector3.forward * (v * speed * Time.deltaTime));
-        transform.Rotate(Vector3.up * (h * turnSpeed * Time.deltaTime));
     }
 
     private void Attack()
