@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 1115149831}
   - component: {fileID: 1115149830}
   - component: {fileID: 1115149829}
+  - component: {fileID: 139041448}
   m_Layer: 6
   m_Name: Canvas
   m_TagString: Untagged
@@ -101,6 +102,18 @@ MonoBehaviour:
   m_BlockingMask:
     serializedVersion: 2
     m_Bits: 4294967295
+--- !u!114 &139041448
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1115149827}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 81a93501706656a47bca43cb58f4be70, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1318371702
 GameObject:
   m_ObjectHideFlags: 0
@@ -491,7 +504,7 @@ Rigidbody:
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 0
+  m_Constraints: 84
   m_CollisionDetection: 0
 --- !u!114 &4000407745882767876
 MonoBehaviour:
@@ -505,8 +518,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 010de0d84894572478f968f152754816, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 4
-  distanceToPlayer: 20
   posRotBall: {fileID: 7057571913369515547}
   ballPrefab: {fileID: 8876525039367591985, guid: 4cae75e068e3ed742a03a30a50051968, type: 3}
   timeBetweenAttacks: 2

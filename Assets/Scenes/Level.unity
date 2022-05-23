@@ -122,7 +122,7 @@ NavMeshSettings:
     preserveTilesOutsideBounds: 0
     debug:
       m_Flags: 0
-  m_NavMeshData: {fileID: 0}
+  m_NavMeshData: {fileID: 23800000, guid: 33ad78da3b000274f892657a3999c73c, type: 2}
 --- !u!1 &17863112
 GameObject:
   m_ObjectHideFlags: 0
@@ -258,6 +258,23 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 17863112}
   m_CullTransparentMesh: 1
+--- !u!1 &139041443 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1115149827, guid: ed37e7d93f195514b9e5b278bdee3aff, type: 3}
+  m_PrefabInstance: {fileID: 8889394617424446758}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &139041448
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 139041443}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 81a93501706656a47bca43cb58f4be70, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &140982984
 GameObject:
   m_ObjectHideFlags: 0
@@ -655,8 +672,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 76696872915096349b7d9e78446b0245, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 7
-  turnSpeed: 80
   headTurnSpeed: 2
   prefab: {fileID: 592198241981131570, guid: fbcb685d010860f43aa613a2a9cd2edb, type: 3}
   posRotCanonBall: {fileID: 1008799479}
@@ -710,12 +725,27 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 79e8bf0cd4d1e1641903a4e2368791be, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  godMode: 0
+  godMode: 1
   maxHealth: 3
   currentHealth: 0
   ballDamage: 1
   lifeBar: {fileID: 140982986}
   GameOverManager: {fileID: 1540938502}
+--- !u!114 &481307951
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 481307944}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 359ffd5a8c028ff43ad2a340be17d70d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 7
+  turnSpeed: 80
+  headTurnSpeed: 2
 --- !u!1 &602051908
 GameObject:
   m_ObjectHideFlags: 0
@@ -3457,8 +3487,12 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 2631664997504425567, guid: d4542fb131429ed45af39976068616d7, type: 3}
+      propertyPath: m_NavMeshLayer
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2631664997504425567, guid: d4542fb131429ed45af39976068616d7, type: 3}
       propertyPath: m_StaticEditorFlags
-      value: 0
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 6729792736391519752, guid: d4542fb131429ed45af39976068616d7, type: 3}
       propertyPath: m_RootOrder
@@ -3517,8 +3551,12 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7651830808230438329, guid: d4542fb131429ed45af39976068616d7, type: 3}
+      propertyPath: m_NavMeshLayer
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7651830808230438329, guid: d4542fb131429ed45af39976068616d7, type: 3}
       propertyPath: m_StaticEditorFlags
-      value: 0
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 7800489840749445179, guid: d4542fb131429ed45af39976068616d7, type: 3}
       propertyPath: m_Name
@@ -3526,15 +3564,23 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7800489840749445179, guid: d4542fb131429ed45af39976068616d7, type: 3}
       propertyPath: m_StaticEditorFlags
-      value: 0
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 8015668236962089721, guid: d4542fb131429ed45af39976068616d7, type: 3}
+      propertyPath: m_NavMeshLayer
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8015668236962089721, guid: d4542fb131429ed45af39976068616d7, type: 3}
       propertyPath: m_StaticEditorFlags
-      value: 0
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 8817073031772259461, guid: d4542fb131429ed45af39976068616d7, type: 3}
+      propertyPath: m_NavMeshLayer
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8817073031772259461, guid: d4542fb131429ed45af39976068616d7, type: 3}
       propertyPath: m_StaticEditorFlags
-      value: 0
+      value: 2147483647
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d4542fb131429ed45af39976068616d7, type: 3}
