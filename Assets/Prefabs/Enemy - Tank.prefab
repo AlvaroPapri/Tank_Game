@@ -433,6 +433,8 @@ GameObject:
   - component: {fileID: 6412590970709901878}
   - component: {fileID: 4000407745882767876}
   - component: {fileID: 6412590970709901882}
+  - component: {fileID: 7739917238598429002}
+  - component: {fileID: 924854261}
   m_Layer: 6
   m_Name: Enemy - Tank
   m_TagString: Enemy
@@ -524,6 +526,40 @@ MonoBehaviour:
   currentHealth: 0
   ballDamage: 50
   lifeBar: {fileID: 1318371704}
+--- !u!195 &7739917238598429002
+NavMeshAgent:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2568002647270360853}
+  m_Enabled: 1
+  m_AgentTypeID: 0
+  m_Radius: 0.77
+  m_Speed: 4
+  m_Acceleration: 8
+  avoidancePriority: 50
+  m_AngularSpeed: 120
+  m_StoppingDistance: 20
+  m_AutoTraverseOffMeshLink: 1
+  m_AutoBraking: 1
+  m_AutoRepath: 1
+  m_Height: 2
+  m_BaseOffset: 0.54
+  m_WalkableMask: 4294967295
+  m_ObstacleAvoidanceType: 4
+--- !u!114 &924854261
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2568002647270360853}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f37109ce3e8afe84a83b3448d9f35406, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &4725175825203765851
 GameObject:
   m_ObjectHideFlags: 0

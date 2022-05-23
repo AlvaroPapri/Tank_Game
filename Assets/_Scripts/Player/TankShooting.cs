@@ -1,9 +1,7 @@
-using System;
 using Unity.VisualScripting;
 using UnityEngine;
-using UnityEngine.UI;
 
-public class Tank : MonoBehaviour
+public class TankShooting : MonoBehaviour
 {
     public int headTurnSpeed;
     
